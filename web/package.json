@@ -12,6 +12,7 @@
     "@types/react-dom": "^16.9.8",
     "axios": "^0.19.2",
     "leaflet": "^1.6.0",
+    "polished": "^4.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-dropzone": "^11.0.2",
@@ -19,6 +20,7 @@
     "react-leaflet": "^2.7.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "styled-components": "^5.2.1",
     "typescript": "^3.7.5"
   },
   "scripts": {
@@ -44,6 +46,7 @@
   },
   "devDependencies": {
     "@types/react-leaflet": "^2.5.2",
-    "@types/react-router-dom": "^5.1.5"
+    "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.7"
   }
 }

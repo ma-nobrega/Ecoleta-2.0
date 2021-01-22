@@ -3,6 +3,9 @@
   --title-color: #322153;
   --text-color: #6C6C80;
 }
+a{
+  text-decoration: none;
+}
 
 * {
   margin: 0;
