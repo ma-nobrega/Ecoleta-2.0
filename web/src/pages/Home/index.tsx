@@ -1,19 +1,19 @@
 import React from 'react';
-import './styles.css';
+import { Container, Content } from './styles';
 import Header from '../../components/Header';
 
 const Home = () => {
   return (
-    <div id="page-home">
-      <div className="content">
+    <Container>
+      <Content>
         <Header />
         <main>
           <h1>Seu marketplace de coleta de resíduos.</h1>
-          <p>Ajudamos pessoas a encotnrarem pontos de coleta de forma eficiente.</p>
+          <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
         </main>
-      </div>
-    </div>
-  );
+      </Content>
+    </Container>
+  )
 }
 
 export default Home;
