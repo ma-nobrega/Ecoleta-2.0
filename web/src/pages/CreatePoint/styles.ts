@@ -2,8 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1100px;
+  max-width:1100px;
   margin: 0 auto;
+  @media(max-width: 1100px) {
+      width:95%;
+    }
 
   form {
     margin: 80px auto;
@@ -14,9 +17,6 @@ export const Container = styled.div`
 
     display: flex;
     flex-direction: column;
-    @media(max-width: 730px) {
-      width:90%;
-    }
     h1 {
       font-size: clamp(0.7rem, 1.2rem + 1.5vw, 2rem );
     }
