@@ -19,8 +19,8 @@ class FilteredPointsController {
     const serializedPoints = points.map(point => {
       return {
         ...point,
-        // image_url: `http://192.168.0.106:3333/uploads/${point.image}`,
-        image_url: `http://localhost:3333/uploads/${point.image}`,
+        image_url: `http://192.168.0.106:3333/uploads/${point.image}`,
+        // image_url: `http://localhost:3333/uploads/${point.image}`,
       };
     });
 

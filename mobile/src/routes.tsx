@@ -1,26 +1,60 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {Feather} from '@expo/vector-icons';
 
 import Home from './pages/Home';
-import Points from './pages/Points';
-import Detail from './pages/Detail';
+import pointStack from './pointStack.routes';
 
-const AppStack = createStackNavigator();
+const { Navigator, Screen } = createBottomTabNavigator();
 
 const Routes = () => {
   return (
     <NavigationContainer>
-      <AppStack.Navigator headerMode='none' screenOptions={{
-        cardStyle: {
-          backgroundColor:'#f0f0f5'
-        }
-      }}
+      <Navigator
+        tabBarOptions={{
+          style: {
+            elevation: 0,
+            shadowOpacity: 0,
+            height: 64,
+          },
+          tabStyle: {
+            // flexDirection:''
+            alignItems: 'center',
+            justifyContent: 'center'
+          },
+          iconStyle: {
+            flex: 0,
+            width: 20,
+            height: 20,
+          },
+          labelStyle: {
+            fontFamily: 'Ubuntu_700Bold',
+            fontSize: 13,
+            marginTop: 8,
+          },
+          inactiveBackgroundColor: '#fafafc',
+          activeBackgroundColor: '#ffffff',
+          inactiveTintColor: '#d6d2dd',
+          activeTintColor: '#34CB79'
+        }}
       >
-        <AppStack.Screen name="Home" component={Home} />
-        <AppStack.Screen name="Points" component={Points} />
-        <AppStack.Screen name="Detail" component={Detail} />
-      </AppStack.Navigator>
+        <Screen name="Home" component={Home} options={{
+          tabBarIcon: ({color, size}) => {
+            return (
+              <Feather name="home" color={color} size={size} />
+            );
+          }
+        }} />
+        <Screen name="FilterPoints" component={pointStack} options={{
+          tabBarLabel: 'Pontos',
+          tabBarIcon: ({color, size}) => {
+            return (
+              <Feather name="map" size={size} color={color} />
+            );
+          }
+        }} />
+      </Navigator>
     </NavigationContainer>
 
   );
